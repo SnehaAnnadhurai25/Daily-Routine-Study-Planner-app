@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    android:padding="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:focusable="false"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center|start"
+            android:autoText="true"
+            android:padding="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:maxLines="2"
+            android:text="IQ QUEST CONTEST"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            ></TextView>
+        <TextView
+            android:id="@+id/subjectTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:focusable="false"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center|start"
+            android:padding="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:maxLines="2"
+            android:text="inter School Event and Sport"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            ></TextView>
+        <TextView
+             android:id="@+id/eventTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="center|start"
+            android:maxLines="1"
+           android:layout_margin="5dp"
+            android:inputType="textMultiLine"
+            android:text="29 APR 2023 05:00 pm"
+            android:textAllCaps="true"
+            android:textColor="@color/dark_gray"
+            android:textSize="10sp"
+            ></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dateTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start|center"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:fontFamily="@font/euclidcirculara_regular"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    android:text="Aug 14 2022, 07:35 PM"
+                    android:textColor="@color/green" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

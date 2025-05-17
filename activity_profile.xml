@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/purple_700"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/llActionbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewBack"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="10dp"
+                android:onClick="goback"
+                android:visibility="visible"
+                app:srcCompat="@drawable/back_arrow" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/euclidcirculara_medium"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="5dp"
+                android:text="Parent Home"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewFilter"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentEnd="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="goback"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="10dp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="10dp"
+                android:tag="binding_2"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/baseline_logout_24"
+                app:tint="@color/white" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_shape_from_top"
+            android:orientation="vertical"
+            android:padding="5dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_shape_from_top"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_behavior="@string/bottom_sheet_behavior">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:paddingLeft="15dp"
+                        android:text="Student Name"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_semibold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:tag="binding_1"
+                        android:text=":"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/snanme"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center|start"
+                        android:tag="binding_1"
+                        android:text=" "
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_behavior="@string/bottom_sheet_behavior">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:paddingLeft="15dp"
+                        android:text="Student DOB"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_semibold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:tag="binding_1"
+                        android:text=":"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center|start"
+                        android:tag="binding_1"
+                        android:text=" "
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_behavior="@string/bottom_sheet_behavior">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:paddingLeft="15dp"
+                        android:text="Student Class"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_semibold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:tag="binding_1"
+                        android:text=":"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cname"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center|start"
+                        android:tag="binding_1"
+                        android:text=" "
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_behavior="@string/bottom_sheet_behavior">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:paddingLeft="15dp"
+                        android:text="REG NO"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_semibold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:tag="binding_1"
+                        android:text=":"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tname"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center|start"
+                        android:tag="binding_1"
+                        android:text=" "
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_behavior="@string/bottom_sheet_behavior">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:paddingLeft="15dp"
+                        android:text="Email"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_semibold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:tag="binding_1"
+                        android:text=":"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/pname"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center|start"
+                        android:tag="binding_1"
+                        android:text=" "
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_behavior="@string/bottom_sheet_behavior">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.4"
+                        android:gravity="center|start"
+                        android:paddingLeft="15dp"
+                        android:text="Contact Number"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_semibold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:tag="binding_1"
+                        android:text=":"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cnumber"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center|start"
+                        android:tag="binding_1"
+                        android:text=" "
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:fontFamily="@font/euclidcirculara_regular" />
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/l1"
+        android:padding="1dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:itemIconTint="@color/bottom_nav_color"
+            app:labelVisibilityMode="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_navigation_menu" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="layout/dialog_status_0"
+    android:background="@drawable/round_shape_from_top"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/subject"
+            android:background="@drawable/bg_round_shape_grey"
+            android:padding="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="subject"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionNext"
+            android:fontFamily="@font/euclidcirculara_regular" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/title"
+            android:background="@drawable/bg_round_shape_grey"
+            android:padding="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionDone"
+            android:fontFamily="@font/euclidcirculara_regular" />
+
+        <TextView
+            android:id="@+id/etlink"
+            android:background="@drawable/bg_round_shape_grey"
+            android:padding="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date and Time"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionDone"
+            android:fontFamily="@font/euclidcirculara_regular" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/event"
+            android:background="@drawable/bg_round_shape_grey"
+            android:padding="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:inputType="textCapSentences"
+            android:imeOptions="actionDone"
+            android:fontFamily="@font/euclidcirculara_regular" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textSize="@dimen/_12sdp"
+                android:textColor="#0070f1"
+                android:layout_gravity="center"
+                android:id="@+id/btnCancel"
+                android:tag="binding_1"
+                android:background="@drawable/btn_shape_cancel"
+                android:padding="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_weight="1"
+                android:fontFamily="@font/euclidcirculara_semibold"
+                android:layout_marginEnd="@dimen/_5sdp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:id="@+id/btnSave"
+                android:tag="binding_2"
+                android:background="@drawable/gradient"
+                android:padding="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_weight="1"
+                android:fontFamily="@font/euclidcirculara_semibold"
+                android:layout_marginStart="@dimen/_5sdp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

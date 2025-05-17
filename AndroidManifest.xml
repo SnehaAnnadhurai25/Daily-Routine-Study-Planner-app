@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/daily"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SSS_School"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ViewStudy"
+            android:exported="false" />
+        <activity
+            android:name=".View_Summery"
+            android:exported="false" />
+        <activity
+            android:name=".StudyTechnique"
+            android:exported="false" />
+        <activity
+            android:name=".AddSummery"
+            android:exported="false" />
+        <activity
+            android:name=".AddNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View_Task"
+            android:exported="false" />
+        <activity
+            android:name=".Todo"
+            android:exported="false" />
+        <activity
+            android:name=".UserHome"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".InternalMarks"
+            android:exported="false" />
+        <activity
+            android:name=".StaffMark"
+            android:exported="false" />
+        <activity
+            android:name=".StudentHome"
+            android:exported="false" />
+        <activity
+            android:name=".ViewAnnouncement"
+            android:exported="false" />
+        <activity
+            android:name=".MarkView"
+            android:exported="false" />
+        <activity
+            android:name=".MarkEntry"
+            android:exported="false" />
+        <activity
+            android:name=".StaffHome"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Announcements"
+            android:exported="false" />
+        <activity
+            android:name=".ViewStaff"
+            android:exported="false" />
+        <activity
+            android:name=".ViewStudent"
+            android:exported="false" />
+        <activity
+            android:name=".StaffEntrolment"
+            android:exported="false" />
+        <activity
+            android:name=".ParentHome"
+            android:exported="false" />
+        <activity
+            android:name=".StudentEntroll"
+            android:exported="false" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="false" />
+        <activity
+            android:name=".SelectUser"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".Utill.ReminderScheduler"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.com.ajt.sss_school" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
